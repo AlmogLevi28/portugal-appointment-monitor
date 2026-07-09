@@ -1,12 +1,20 @@
 {
   "lastAvailabilityHash": null,
   "lastAvailabilitySummary": [],
-  "lastSuccessfulRun": "2026-07-09T17:43:35.072Z",
+  "lastSuccessfulRun": "2026-07-09T18:34:12.727Z",
   "lastError": null,
-  "runs": [],
+  "runs": [
+    {
+      "time": "2026-07-09T18:34:12.727Z",
+      "status": "success",
+      "availabilityFound": false,
+      "availabilityCount": 0,
+      "openings": []
+    }
+  ],
   "stats": {
-    "totalRuns": 3,
-    "successfulRuns": 3,
+    "totalRuns": 4,
+    "successfulRuns": 4,
     "failedRuns": 0,
     "availabilityRuns": 0
   }
