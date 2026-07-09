@@ -70,8 +70,8 @@ async function main() {
 
     updateSuccess(state);
 
-    if (isNewAvailability(state)) {
-
+if (isNewAvailability(state, openings)) {
+  
       let msg =
 `🇵🇹 Portugal Appointment Found
 
