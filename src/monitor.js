@@ -45,8 +45,6 @@ async function main() {
 
   log("Portugal Appointment Monitor started.");
 
-  await sendTelegram("✅ Test: Portugal Appointment Monitor is running.");
-
   if (config.monitor.randomDelay.enabled) {
 
     await randomDelay(
