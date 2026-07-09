@@ -49,16 +49,18 @@ export function hashOpenings(openings) {
     .digest("hex");
 }
 
-export function updateSuccess(state, openings) {
+export function updateSuccess(state) {
   state.stats.totalRuns += 1;
   state.stats.successfulRuns += 1;
   state.lastSuccessfulRun = new Date().toISOString();
   state.lastError = null;
 
-  if (openings.length > 0) {
-    state.lastAvailabilityHash = hashOpenings(openings);
-    state.lastAvailabilitySummary = openings;
-  }
+  saveState(state);
+}
+
+export function markAvailabilityAsSeen(state, openings) {
+  state.lastAvailabilityHash = hashOpenings(openings);
+  state.lastAvailabilitySummary = openings;
 
   saveState(state);
 }
