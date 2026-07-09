@@ -1,5 +1,6 @@
 import { config } from "./config.js";
 import { log, error } from "./logger.js";
+import { sleep } from "./utils.js";
 
 export async function sendTelegram(message) {
   if (!config.telegram.token || !config.telegram.chatId) {
@@ -7,10 +8,11 @@ export async function sendTelegram(message) {
     return;
   }
 
-  try {
-    const response = await fetch(
-      `https://api.telegram.org/bot${config.telegram.token}/sendMessage`,
-      {
+  const url = `https://api.telegram.org/bot${config.telegram.token}/sendMessage`;
+
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -20,15 +22,20 @@ export async function sendTelegram(message) {
           text: message,
           disable_web_page_preview: false,
         }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Telegram returned HTTP ${response.status}`);
       }
-    );
 
-    if (!response.ok) {
-      throw new Error(`Telegram returned HTTP ${response.status}`);
+      log("Telegram notification sent.");
+      return;
+    } catch (err) {
+      error(`Telegram attempt ${attempt} failed: ${err.message}`);
+
+      if (attempt < 2) {
+        await sleep(2000);
+      }
     }
-
-    log("Telegram notification sent.");
-  } catch (err) {
-    error(`Unable to send Telegram message: ${err.message}`);
   }
 }
