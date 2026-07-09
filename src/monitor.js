@@ -68,8 +68,8 @@ async function main() {
 
     }
 
-    updateSuccess(state);
-
+updateSuccess(state, openings);
+    
 if (isNewAvailability(state, openings)) {
   
       let msg =
