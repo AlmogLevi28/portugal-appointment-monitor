@@ -3,9 +3,11 @@
   "lastAvailabilitySummary": [],
   "lastSuccessfulRun": "2026-07-09T17:43:35.072Z",
   "lastError": null,
+  "runs": [],
   "stats": {
     "totalRuns": 3,
     "successfulRuns": 3,
-    "failedRuns": 0
+    "failedRuns": 0,
+    "availabilityRuns": 0
   }
 }
