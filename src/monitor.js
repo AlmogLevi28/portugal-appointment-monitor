@@ -8,7 +8,8 @@ import {
   saveState,
   updateSuccess,
   updateFailure,
-  isNewAvailability
+  isNewAvailability,
+  markAvailabilityAsSeen
 } from "./state.js";
 
 function getMonths() {
@@ -92,6 +93,8 @@ Reason: ${item.reason}
 https://agendamentosconsulares.as.me/schedule/303dd3be/appointment/83816615/calendar/12788063?calendarIds=12788063`;
 
       await sendTelegram(msg);
+
+      markAvailabilityAsSeen(state, openings);
 
       log("Telegram notification sent.");
 
