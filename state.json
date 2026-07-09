@@ -1,0 +1,11 @@
+{
+  "lastAvailabilityHash": null,
+  "lastAvailabilitySummary": [],
+  "lastSuccessfulRun": null,
+  "lastError": null,
+  "stats": {
+    "totalRuns": 0,
+    "successfulRuns": 0,
+    "failedRuns": 0
+  }
+}
