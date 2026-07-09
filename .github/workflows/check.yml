@@ -5,16 +5,37 @@ on:
     - cron: "2-59/5 * * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   check:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Run monitor
-        run: node monitor.js
+        run: npm start
+        env:
+          OWNER_ID: ${{ secrets.OWNER_ID }}
+          APPOINTMENT_TYPE_ID: ${{ secrets.APPOINTMENT_TYPE_ID }}
+          CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+          TIMEZONE: ${{ secrets.TIMEZONE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Save monitor state
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add state.json
+          git diff --cached --quiet || git commit -m "Update monitor state"
+          git push
