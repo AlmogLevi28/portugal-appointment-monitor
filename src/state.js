@@ -1,4 +1,7 @@
+import fs from "fs";
 import crypto from "crypto";
+
+const STATE_FILE = "state.json";
 
 const DEFAULT_STATE = {
   lastAvailabilityHash: null,
@@ -13,7 +16,23 @@ const DEFAULT_STATE = {
 };
 
 export function loadState() {
-  return { ...DEFAULT_STATE };
+  if (!fs.existsSync(STATE_FILE)) {
+    return structuredClone(DEFAULT_STATE);
+  }
+
+  try {
+    const raw = fs.readFileSync(STATE_FILE, "utf8");
+    return {
+      ...structuredClone(DEFAULT_STATE),
+      ...JSON.parse(raw),
+    };
+  } catch {
+    return structuredClone(DEFAULT_STATE);
+  }
+}
+
+export function saveState(state) {
+  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
 export function hashOpenings(openings) {
