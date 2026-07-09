@@ -8,10 +8,12 @@ const DEFAULT_STATE = {
   lastAvailabilitySummary: [],
   lastSuccessfulRun: null,
   lastError: null,
+  runs: [],
   stats: {
     totalRuns: 0,
     successfulRuns: 0,
     failedRuns: 0,
+    availabilityRuns: 0,
   },
 };
 
@@ -50,11 +52,35 @@ export function hashOpenings(openings) {
     .digest("hex");
 }
 
-export function updateSuccess(state) {
+function keepLast7DaysOnly(state) {
+  const cutoff = Date.now() - 7 * 24 * 60 * 60 * 1000;
+
+  state.runs = (state.runs || []).filter(run => {
+    return new Date(run.time).getTime() >= cutoff;
+  });
+}
+
+export function updateSuccess(state, openings = []) {
   state.stats.totalRuns += 1;
   state.stats.successfulRuns += 1;
   state.lastSuccessfulRun = new Date().toISOString();
   state.lastError = null;
+
+  if (openings.length > 0) {
+    state.stats.availabilityRuns += 1;
+  }
+
+  state.runs = state.runs || [];
+
+  state.runs.push({
+    time: new Date().toISOString(),
+    status: "success",
+    availabilityFound: openings.length > 0,
+    availabilityCount: openings.length,
+    openings,
+  });
+
+  keepLast7DaysOnly(state);
 }
 
 export function updateFailure(state, error) {
@@ -67,6 +93,16 @@ export function updateFailure(state, error) {
     status: error.status || null,
     time: new Date().toISOString(),
   };
+
+  state.runs = state.runs || [];
+
+  state.runs.push({
+    time: new Date().toISOString(),
+    status: "failed",
+    error: state.lastError,
+  });
+
+  keepLast7DaysOnly(state);
 }
 
 export function isNewAvailability(state, openings) {
