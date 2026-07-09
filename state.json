@@ -1,11 +1,11 @@
 {
   "lastAvailabilityHash": null,
   "lastAvailabilitySummary": [],
-  "lastSuccessfulRun": null,
+  "lastSuccessfulRun": "2026-07-09T16:41:57.232Z",
   "lastError": null,
   "stats": {
-    "totalRuns": 0,
-    "successfulRuns": 0,
+    "totalRuns": 1,
+    "successfulRuns": 1,
     "failedRuns": 0
   }
 }
