@@ -1,0 +1,14 @@
+{
+  "name": "portugal-appointment-monitor",
+  "version": "1.0.0",
+  "description": "Monitors Portugal consular appointment availability and sends Telegram alerts.",
+  "main": "src/monitor.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/monitor.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
