@@ -1,7 +1,7 @@
 import { buildMonthUrl, fetchJsonWithRetry, ApiError } from "./api.js";
 import { log } from "./logger.js";
 
-function classifyValue(value) {
+export function classifyValue(value) {
   if (value === false) {
     return {
       available: false,
@@ -20,13 +20,6 @@ function classifyValue(value) {
     return {
       available: value.length > 0,
       reason: "ARRAY",
-    };
-  }
-
-  if (value && typeof value === "object") {
-    return {
-      available: true,
-      reason: "OBJECT",
     };
   }
 
@@ -53,6 +46,7 @@ export async function checkMonth(monthDate) {
   }
 
   const openings = [];
+  const unknownValues = [];
 
   for (const [date, value] of Object.entries(json)) {
     const result = classifyValue(value);
@@ -66,10 +60,19 @@ export async function checkMonth(monthDate) {
     }
 
     if (result.reason === "UNKNOWN_FORMAT") {
+      unknownValues.push({ date, value });
       log(
         `Unknown value returned for ${date}: ${JSON.stringify(value)}`
       );
     }
+  }
+
+  if (unknownValues.length > 0) {
+    throw new ApiError(
+      `API returned an unknown availability format for ${unknownValues.length} date(s)`,
+      null,
+      "API_CHANGED"
+    );
   }
 
   return openings;

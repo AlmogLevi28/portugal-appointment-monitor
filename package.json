@@ -5,7 +5,8 @@
   "main": "src/monitor.js",
   "type": "module",
   "scripts": {
-    "start": "node src/monitor.js"
+    "start": "node src/monitor.js",
+    "test": "node --test"
   },
   "engines": {
     "node": ">=22"
