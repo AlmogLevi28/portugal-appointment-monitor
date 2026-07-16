@@ -1,3 +1,13 @@
+function positiveInteger(name, fallback) {
+  const raw = process.env[name];
+  if (raw === undefined || raw === "") return fallback;
+  const value = Number(raw);
+  if (!Number.isInteger(value) || value <= 0) {
+    throw new Error(`${name} must be a positive integer`);
+  }
+  return value;
+}
+
 export const config = {
   owner: process.env.OWNER_ID,
   appointmentTypeId: process.env.APPOINTMENT_TYPE_ID,
@@ -10,13 +20,13 @@ export const config = {
   },
 
   monitor: {
-    monthsToCheck: 5,
+    monthsToCheck: positiveInteger("MONTHS_TO_CHECK", 5),
 
-    requestDelayMs: 1000,
+    requestDelayMs: positiveInteger("REQUEST_DELAY_MS", 1000),
 
-    retries: 3,
+    retries: positiveInteger("REQUEST_RETRIES", 3),
 
-    timeoutMs: 10000,
+    timeoutMs: positiveInteger("REQUEST_TIMEOUT_MS", 10000),
 
     randomDelay: {
       enabled: true,
@@ -36,6 +46,14 @@ export const config = {
     },
   },
 };
+
+export function bookingUrl() {
+  const path = `/schedule/${encodeURIComponent(config.owner)}`
+    + `/appointment/${encodeURIComponent(config.appointmentTypeId)}`
+    + `/calendar/${encodeURIComponent(config.calendarId)}`;
+  const query = new URLSearchParams({ calendarIds: config.calendarId });
+  return `https://agendamentosconsulares.as.me${path}?${query}`;
+}
 
 export function validateConfig() {
   const required = [

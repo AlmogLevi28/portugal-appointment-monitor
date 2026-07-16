@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: portugal-appointment-monitor
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -20,6 +24,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Run tests
+        run: npm test
 
       - name: Run monitor
         run: node src/monitor.js

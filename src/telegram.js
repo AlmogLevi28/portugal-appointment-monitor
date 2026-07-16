@@ -5,7 +5,7 @@ import { sleep } from "./utils.js";
 export async function sendTelegram(message) {
   if (!config.telegram.token || !config.telegram.chatId) {
     log("Telegram is not configured.");
-    return;
+    return false;
   }
 
   const url = `https://api.telegram.org/bot${config.telegram.token}/sendMessage`;
@@ -29,7 +29,7 @@ export async function sendTelegram(message) {
       }
 
       log("Telegram notification sent.");
-      return;
+      return true;
     } catch (err) {
       error(`Telegram attempt ${attempt} failed: ${err.message}`);
 
@@ -38,4 +38,6 @@ export async function sendTelegram(message) {
       }
     }
   }
+
+  throw new Error("Telegram notification failed after 2 attempts");
 }

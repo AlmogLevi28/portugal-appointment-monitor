@@ -1,4 +1,4 @@
-import { config, validateConfig } from "./config.js";
+import { bookingUrl, config, validateConfig } from "./config.js";
 import { log, error } from "./logger.js";
 import { randomDelay } from "./utils.js";
 import { sendTelegram } from "./telegram.js";
@@ -90,7 +90,7 @@ Reason: ${item.reason}
       msg +=
 `Booking Page:
 
-https://agendamentosconsulares.as.me/schedule/303dd3be/appointment/83816615/calendar/12788063?calendarIds=12788063`;
+${bookingUrl()}`;
 
       await sendTelegram(msg);
 
@@ -100,6 +100,8 @@ https://agendamentosconsulares.as.me/schedule/303dd3be/appointment/83816615/cale
 
     } else {
 
+      // Clearing the hash lets the same date alert again after it disappears.
+      markAvailabilityAsSeen(state, openings);
       log("No new availability.");
 
     }
@@ -117,9 +119,13 @@ https://agendamentosconsulares.as.me/schedule/303dd3be/appointment/83816615/cale
 
     updateFailure(state, err);
 
+    // Persist the failure before attempting a best-effort notification.
+    saveState(state);
+
     error(err.message);
 
-    await sendTelegram(
+    try {
+      await sendTelegram(
 `⚠️ Portugal Appointment Monitor
 
 Error:
@@ -133,7 +139,10 @@ ${err.type ?? "UNKNOWN"}
 Status:
 
 ${err.status ?? "N/A"}`
-    );
+      );
+    } catch (telegramError) {
+      error(`Could not send failure notification: ${telegramError.message}`);
+    }
 
     throw err;
 

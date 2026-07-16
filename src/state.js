@@ -115,6 +115,8 @@ export function isNewAvailability(state, openings) {
 }
 
 export function markAvailabilityAsSeen(state, openings) {
-  state.lastAvailabilityHash = hashOpenings(openings);
+  state.lastAvailabilityHash = openings.length > 0
+    ? hashOpenings(openings)
+    : null;
   state.lastAvailabilitySummary = openings;
 }
