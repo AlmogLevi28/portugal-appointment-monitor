@@ -8,15 +8,13 @@
     }
   ],
   "lastSuccessfulRun": "2026-07-19T14:11:53.809Z",
-  "lastError": null,
+  "lastError": {
+    "message": "HTTP 503",
+    "type": "SERVER_ERROR",
+    "status": 503,
+    "time": "2026-07-19T15:16:22.574Z"
+  },
   "runs": [
-    {
-      "time": "2026-07-12T14:14:49.285Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-07-12T15:27:30.638Z",
       "status": "success",
@@ -845,12 +843,22 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-07-19T15:16:22.574Z",
+      "status": "failed",
+      "error": {
+        "message": "HTTP 503",
+        "type": "SERVER_ERROR",
+        "status": 503,
+        "time": "2026-07-19T15:16:22.574Z"
+      }
     }
   ],
   "stats": {
-    "totalRuns": 154,
+    "totalRuns": 155,
     "successfulRuns": 154,
-    "failedRuns": 0,
+    "failedRuns": 1,
     "availabilityRuns": 16
   }
 }
