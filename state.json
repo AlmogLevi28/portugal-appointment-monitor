@@ -1,16 +1,15 @@
 {
-  "lastAvailabilityHash": null,
-  "lastAvailabilitySummary": [],
-  "lastSuccessfulRun": "2026-08-02T12:12:11.949Z",
+  "lastAvailabilityHash": "67deca680c2fb6f000fda3024a5c3c019e4f346c1593238a23cbd35acabcf648",
+  "lastAvailabilitySummary": [
+    {
+      "date": "2026-09-16",
+      "value": true,
+      "reason": "BOOLEAN_TRUE"
+    }
+  ],
+  "lastSuccessfulRun": "2026-08-02T13:57:51.531Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-07-26T12:15:22.270Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-07-26T14:02:46.721Z",
       "status": "success",
@@ -764,12 +763,25 @@
       "availabilityFound": false,
       "availabilityCount": 0,
       "openings": []
+    },
+    {
+      "time": "2026-08-02T13:57:51.531Z",
+      "status": "success",
+      "availabilityFound": true,
+      "availabilityCount": 1,
+      "openings": [
+        {
+          "date": "2026-09-16",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        }
+      ]
     }
   ],
   "stats": {
-    "totalRuns": 349,
-    "successfulRuns": 348,
+    "totalRuns": 350,
+    "successfulRuns": 349,
     "failedRuns": 1,
-    "availabilityRuns": 47
+    "availabilityRuns": 48
   }
 }
