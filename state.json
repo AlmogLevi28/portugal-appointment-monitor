@@ -2,15 +2,13 @@
   "lastAvailabilityHash": null,
   "lastAvailabilitySummary": [],
   "lastSuccessfulRun": "2026-08-05T12:07:31.128Z",
-  "lastError": null,
+  "lastError": {
+    "message": "HTTP 403",
+    "type": "BLOCKED_403",
+    "status": 403,
+    "time": "2026-08-05T14:30:52.696Z"
+  },
   "runs": [
-    {
-      "time": "2026-07-29T12:18:59.478Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-07-29T14:35:56.986Z",
       "status": "success",
@@ -863,12 +861,22 @@
       "availabilityFound": false,
       "availabilityCount": 0,
       "openings": []
+    },
+    {
+      "time": "2026-08-05T14:30:52.696Z",
+      "status": "failed",
+      "error": {
+        "message": "HTTP 403",
+        "type": "BLOCKED_403",
+        "status": 403,
+        "time": "2026-08-05T14:30:52.696Z"
+      }
     }
   ],
   "stats": {
-    "totalRuns": 387,
+    "totalRuns": 388,
     "successfulRuns": 386,
-    "failedRuns": 1,
+    "failedRuns": 2,
     "availabilityRuns": 61
   }
 }
