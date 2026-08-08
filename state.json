@@ -12,7 +12,7 @@
       "reason": "BOOLEAN_TRUE"
     }
   ],
-  "lastSuccessfulRun": "2026-08-08T09:37:43.933Z",
+  "lastSuccessfulRun": "2026-08-08T10:07:19.967Z",
   "lastError": null,
   "runs": [
     {
@@ -1256,12 +1256,30 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-08T10:07:19.967Z",
+      "status": "success",
+      "availabilityFound": true,
+      "availabilityCount": 2,
+      "openings": [
+        {
+          "date": "2026-08-11",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-08-12",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        }
+      ]
     }
   ],
   "stats": {
-    "totalRuns": 433,
-    "successfulRuns": 431,
+    "totalRuns": 434,
+    "successfulRuns": 432,
     "failedRuns": 2,
-    "availabilityRuns": 93
+    "availabilityRuns": 94
   }
 }
