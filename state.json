@@ -1,5 +1,5 @@
 {
-  "lastAvailabilityHash": "98e11c69ae4a67161470ed4d3cb7729778b1af5998fac04368068232d4e3e890",
+  "lastAvailabilityHash": "788a450892c69c3eb33e1899fd6dbcafea509cba6117d0b379736bc249a07797",
   "lastAvailabilitySummary": [
     {
       "date": "2026-08-13",
@@ -12,21 +12,6 @@
       "reason": "BOOLEAN_TRUE"
     },
     {
-      "date": "2026-08-17",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
-    },
-    {
-      "date": "2026-08-19",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
-    },
-    {
-      "date": "2026-08-21",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
-    },
-    {
       "date": "2026-08-25",
       "value": true,
       "reason": "BOOLEAN_TRUE"
@@ -35,18 +20,16 @@
       "date": "2026-08-26",
       "value": true,
       "reason": "BOOLEAN_TRUE"
+    },
+    {
+      "date": "2026-09-15",
+      "value": true,
+      "reason": "BOOLEAN_TRUE"
     }
   ],
-  "lastSuccessfulRun": "2026-08-12T16:07:47.970Z",
+  "lastSuccessfulRun": "2026-08-12T17:10:38.851Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-05T16:17:59.001Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-08-05T17:58:08.985Z",
       "status": "success",
@@ -2140,12 +2123,45 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-12T17:10:38.851Z",
+      "status": "success",
+      "availabilityFound": true,
+      "availabilityCount": 5,
+      "openings": [
+        {
+          "date": "2026-08-13",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-08-14",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-08-25",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-08-26",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-09-15",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        }
+      ]
     }
   ],
   "stats": {
-    "totalRuns": 544,
-    "successfulRuns": 542,
+    "totalRuns": 545,
+    "successfulRuns": 543,
     "failedRuns": 2,
-    "availabilityRuns": 170
+    "availabilityRuns": 171
   }
 }
