@@ -18,15 +18,13 @@
     }
   ],
   "lastSuccessfulRun": "2026-08-12T21:56:47.043Z",
-  "lastError": null,
+  "lastError": {
+    "message": "HTTP 500",
+    "type": "SERVER_ERROR",
+    "status": 500,
+    "time": "2026-08-12T22:47:16.005Z"
+  },
   "runs": [
-    {
-      "time": "2026-08-05T22:01:42.928Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-08-05T23:13:22.798Z",
       "status": "success",
@@ -2240,12 +2238,22 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-12T22:47:16.005Z",
+      "status": "failed",
+      "error": {
+        "message": "HTTP 500",
+        "type": "SERVER_ERROR",
+        "status": 500,
+        "time": "2026-08-12T22:47:16.005Z"
+      }
     }
   ],
   "stats": {
-    "totalRuns": 550,
+    "totalRuns": 551,
     "successfulRuns": 548,
-    "failedRuns": 2,
+    "failedRuns": 3,
     "availabilityRuns": 176
   }
 }
