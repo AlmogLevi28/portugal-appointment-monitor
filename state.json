@@ -1,43 +1,20 @@
 {
-  "lastAvailabilityHash": "44c70d644e2b7ab462443bc4964450d219dd79cc66abc51de91ffa6ff4c794a3",
+  "lastAvailabilityHash": "ceb929af3d8423d8c4dd846e7531fd4db4c3e4c2b80f5f7a42cffab789936b75",
   "lastAvailabilitySummary": [
     {
-      "date": "2026-09-28",
+      "date": "2026-08-28",
+      "value": true,
+      "reason": "BOOLEAN_TRUE"
+    },
+    {
+      "date": "2026-09-04",
       "value": true,
       "reason": "BOOLEAN_TRUE"
     }
   ],
-  "lastSuccessfulRun": "2026-08-14T16:26:54.321Z",
+  "lastSuccessfulRun": "2026-08-14T17:30:28.108Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-07T17:08:38.382Z",
-      "status": "success",
-      "availabilityFound": true,
-      "availabilityCount": 4,
-      "openings": [
-        {
-          "date": "2026-08-10",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-11",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-12",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-19",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        }
-      ]
-    },
     {
       "time": "2026-08-07T18:01:09.562Z",
       "status": "success",
@@ -2525,12 +2502,30 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-14T17:30:28.108Z",
+      "status": "success",
+      "availabilityFound": true,
+      "availabilityCount": 2,
+      "openings": [
+        {
+          "date": "2026-08-28",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        },
+        {
+          "date": "2026-09-04",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        }
+      ]
     }
   ],
   "stats": {
-    "totalRuns": 586,
-    "successfulRuns": 583,
+    "totalRuns": 587,
+    "successfulRuns": 584,
     "failedRuns": 3,
-    "availabilityRuns": 203
+    "availabilityRuns": 204
   }
 }
