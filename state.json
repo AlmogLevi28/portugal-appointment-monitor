@@ -1,68 +1,15 @@
 {
-  "lastAvailabilityHash": "c6b29dc82cfd177f7b3df6475524cbc5ac33a33cee4de7b6b1225a7f694a3437",
+  "lastAvailabilityHash": "c78571733454bb798d78c8ca3558a95dc0aad7085eee136ba1b28786ddcebf5d",
   "lastAvailabilitySummary": [
     {
       "date": "2026-09-02",
       "value": true,
       "reason": "BOOLEAN_TRUE"
-    },
-    {
-      "date": "2026-09-04",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
-    },
-    {
-      "date": "2026-10-01",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
     }
   ],
-  "lastSuccessfulRun": "2026-08-19T16:01:49.450Z",
+  "lastSuccessfulRun": "2026-08-19T16:42:18.437Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-12T16:07:47.970Z",
-      "status": "success",
-      "availabilityFound": true,
-      "availabilityCount": 7,
-      "openings": [
-        {
-          "date": "2026-08-13",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-14",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-17",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-19",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-21",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-25",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-08-26",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        }
-      ]
-    },
     {
       "time": "2026-08-12T17:10:38.851Z",
       "status": "success",
@@ -3119,12 +3066,25 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-19T16:42:18.438Z",
+      "status": "success",
+      "availabilityFound": true,
+      "availabilityCount": 1,
+      "openings": [
+        {
+          "date": "2026-09-02",
+          "value": true,
+          "reason": "BOOLEAN_TRUE"
+        }
+      ]
     }
   ],
   "stats": {
-    "totalRuns": 800,
-    "successfulRuns": 797,
+    "totalRuns": 801,
+    "successfulRuns": 798,
     "failedRuns": 3,
-    "availabilityRuns": 297
+    "availabilityRuns": 298
   }
 }
