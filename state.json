@@ -1,23 +1,9 @@
 {
   "lastAvailabilityHash": null,
   "lastAvailabilitySummary": [],
-  "lastSuccessfulRun": "2026-08-25T21:02:08.438Z",
+  "lastSuccessfulRun": "2026-08-25T21:38:06.173Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-18T21:03:57.579Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-18T21:35:09.749Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-08-18T21:54:59.119Z",
       "status": "success",
@@ -3166,11 +3152,18 @@
       "availabilityFound": false,
       "availabilityCount": 0,
       "openings": []
+    },
+    {
+      "time": "2026-08-25T21:38:06.173Z",
+      "status": "success",
+      "availabilityFound": false,
+      "availabilityCount": 0,
+      "openings": []
     }
   ],
   "stats": {
-    "totalRuns": 1048,
-    "successfulRuns": 1045,
+    "totalRuns": 1049,
+    "successfulRuns": 1046,
     "failedRuns": 3,
     "availabilityRuns": 408
   }
