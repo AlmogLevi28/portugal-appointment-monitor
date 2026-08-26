@@ -1,65 +1,9 @@
 {
   "lastAvailabilityHash": null,
   "lastAvailabilitySummary": [],
-  "lastSuccessfulRun": "2026-08-26T14:58:58.738Z",
+  "lastSuccessfulRun": "2026-08-26T16:24:28.108Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-19T15:36:23.893Z",
-      "status": "success",
-      "availabilityFound": true,
-      "availabilityCount": 5,
-      "openings": [
-        {
-          "date": "2026-09-02",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-09-04",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-09-30",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-10-01",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-10-02",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        }
-      ]
-    },
-    {
-      "time": "2026-08-19T16:01:49.450Z",
-      "status": "success",
-      "availabilityFound": true,
-      "availabilityCount": 3,
-      "openings": [
-        {
-          "date": "2026-09-02",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-09-04",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        },
-        {
-          "date": "2026-10-01",
-          "value": true,
-          "reason": "BOOLEAN_TRUE"
-        }
-      ]
-    },
     {
       "time": "2026-08-19T16:42:18.438Z",
       "status": "success",
@@ -3105,11 +3049,18 @@
       "availabilityFound": false,
       "availabilityCount": 0,
       "openings": []
+    },
+    {
+      "time": "2026-08-26T16:24:28.108Z",
+      "status": "success",
+      "availabilityFound": false,
+      "availabilityCount": 0,
+      "openings": []
     }
   ],
   "stats": {
-    "totalRuns": 1072,
-    "successfulRuns": 1069,
+    "totalRuns": 1073,
+    "successfulRuns": 1070,
     "failedRuns": 3,
     "availabilityRuns": 409
   }
