@@ -1,64 +1,9 @@
 {
-  "lastAvailabilityHash": "51aad3f5aa976165e3306446b4538258c466216dd3f4b3367b013b94f94564ad",
-  "lastAvailabilitySummary": [
-    {
-      "date": "2026-08-27",
-      "value": true,
-      "reason": "BOOLEAN_TRUE"
-    }
-  ],
-  "lastSuccessfulRun": "2026-08-26T23:35:00.191Z",
+  "lastAvailabilityHash": null,
+  "lastAvailabilitySummary": [],
+  "lastSuccessfulRun": "2026-08-27T05:00:41.369Z",
   "lastError": null,
   "runs": [
-    {
-      "time": "2026-08-19T23:45:43.858Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T00:01:56.120Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T01:47:11.419Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T02:45:14.742Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T03:33:17.398Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T04:19:06.731Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
-    {
-      "time": "2026-08-20T04:59:03.852Z",
-      "status": "success",
-      "availabilityFound": false,
-      "availabilityCount": 0,
-      "openings": []
-    },
     {
       "time": "2026-08-20T05:38:53.359Z",
       "status": "success",
@@ -2960,11 +2905,18 @@
           "reason": "BOOLEAN_TRUE"
         }
       ]
+    },
+    {
+      "time": "2026-08-27T05:00:41.369Z",
+      "status": "success",
+      "availabilityFound": false,
+      "availabilityCount": 0,
+      "openings": []
     }
   ],
   "stats": {
-    "totalRuns": 1076,
-    "successfulRuns": 1073,
+    "totalRuns": 1077,
+    "successfulRuns": 1074,
     "failedRuns": 3,
     "availabilityRuns": 411
   }
