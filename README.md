@@ -33,7 +33,7 @@ npm start
 npm test
 ```
 
-Tests cover API value classification and notification deduplication, including the disappearance and reappearance of the same appointment date.
+Tests cover API value classification, booking URL construction, required-setting validation, and notification deduplication, including the disappearance and reappearance of the same appointment date.
 
 ## Operations
 
